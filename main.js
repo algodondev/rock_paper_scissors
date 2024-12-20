@@ -13,6 +13,12 @@ function getComputerChoice(){
     return choice;
 }
 
+function getHumanChoice(){
+    let choice = prompt("Insert your choice: ").toLowerCase()
+
+    return choice
+}
+
 
 
 

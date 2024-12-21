@@ -19,15 +19,17 @@ function getHumanChoice(){
     return choice
 }
 
-function playRound(humanChoice, computerChoice, humanScore, computerScore){
+function playRound(humanChoice, computerChoice){
     switch (humanChoice){
         case "rock":
             if (computerChoice == "rock"){
                 console.log("Tie!");
             } else if (computerChoice == "scissors"){
                 console.log("You win!");
+                humanScore++
             } else if (computerChoice == "paper"){
                 console.log("You lose!");
+                computerScore++
             }
             break;
         case "scissors":
@@ -35,8 +37,10 @@ function playRound(humanChoice, computerChoice, humanScore, computerScore){
                 console.log("Tie!");
             } else if (computerChoice == "paper"){
                 console.log("You win!");
+                humanScore++
             } else if (computerChoice == "rock"){
                 console.log("You lose!");
+                computerScore++
             }
             break;
         case "paper":
@@ -44,8 +48,10 @@ function playRound(humanChoice, computerChoice, humanScore, computerScore){
                 console.log("Tie!");
             } else if (computerChoice == "rock"){
                 console.log("You win!");
+                humanScore++
             } else if (computerChoice == "scissors"){
                 console.log("You lose!");
+                computerScore++
             }
             break;
     }
@@ -59,3 +65,4 @@ let computerChoice = getComputerChoice();
 let humanChoice = getHumanChoice();
 
 playRound(humanChoice, computerChoice)
+console.log(`human: ${humanScore}, computer: ${computerScore}`);

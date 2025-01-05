@@ -57,17 +57,13 @@ function playRound(humanChoice, computerChoice){
     }
 }
 
-function playGame(rounds){
+function playGame(choice){
+    let computerChoice = getComputerChoice();
+    let humanChoice = choice
+
+    playRound(humanChoice, computerChoice)
+    console.log(`human: ${humanScore}, computer: ${computerScore}`);
     
-    for (let i = 0; i < rounds; i++){
-
-        let computerChoice = getComputerChoice();
-        let humanChoice = getHumanChoice();
-
-        playRound(humanChoice, computerChoice)
-        console.log(`human: ${humanScore}, computer: ${computerScore}`);
-    }
-
     if(humanScore > computerScore){
         console.log("You win the game!");
     }else if (humanScore == computerScore){
@@ -77,7 +73,16 @@ function playGame(rounds){
     }
 }
 
+const playerChoices = document.querySelectorAll("button");
+
 let humanScore = 0
 let computerScore = 0
 
-playGame(5)
+for (let button of playerChoices){
+    button.addEventListener("click", () =>{
+        const choice = String(button.id)
+        playGame(choice)
+    })
+}
+
+// playGame(5)

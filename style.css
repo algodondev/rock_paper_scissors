@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.score-display{
+    border: 1px solid black;
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    text-align: center;
+}
+
+.score-display > div{
+    flex: 1;
+}
+
+.player-selection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 3;
+}

@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-display{
+
+    flex: 1;
+    display: flex;
+    gap: 30px;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.player-selection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 3;
+}
